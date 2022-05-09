@@ -113,7 +113,7 @@ cd ~/environment/RoboMakerROSbotProject/
 
 本Demo中，ROSbots 的任务是自主探索周围的环境，它将驱动到任何可访问的位置，可以实时观察 ROSbot 是如何构建地图的。
 
-打开终端机菜单 `Applications`-> `Terminal emulation`并执行： 
+打开终端机菜单 `Applications`-> `Terminal emulation`并执行：  
 
 ```bash
 rviz -d $(rospack find tutorial_pkg)/rviz/tutorial_8.rviz
