@@ -1,6 +1,8 @@
 ## RoboMaker ROS 项目演示
 
-## 配置 AWS 环境 
+
+
+### 配置 AWS 环境 
 
 在我们使用 AWS RoboMaker 构建和部署教程应用程序之前，需要先设置 AWS 环境。为了简化配置，使用 AWS CloudFormation模板快速部署。通过CloudFormation 会在 Amazon S3 中创建一个存储桶，在 AWS Identity and Access Manager (IAM) 中创建 AWS RoboMaker模拟和部署我们的机器人应用程序所需的必要权限。 
 
@@ -14,11 +16,9 @@
 6. 在 Options 页面上，保留所有默认值并选择 下一步 。 
 7. 在 Review 页面上，单击复选框以确认 CloudFormation 将代表您创建 IAM 资源，单击 **创建** 。 
 
-创建堆栈需要几分钟的时间，当状态变为 CREATE_COMPLETE 时，选择您刚刚创建的堆栈，并查看其输出。  您将看到 3 个键/值对。  
+创建堆栈需要几分钟的时间，当状态变为 CREATE_COMPLETE 时，选择您刚刚创建的堆栈，并查看其输出。  
 
-## 
-
-## RoboMaker 中的 ROSbot 设置 
+### RoboMaker 中的 ROSbot 设置 
 
 在 Greengrass 能够运行和部署应用程序之前，ROSbot 需要进行一些系统修改。
 
@@ -52,9 +52,7 @@ scp ROSbot-setup.zip user@ROSBOT_IP:ROSbot-setup.zip
 scp greengrass-linux-armv7l-1.9.2.tar.gz user@ROSBOT_IP:greengrass-linux-armv7l-1.9.2.tar.gz
 ```
 
-
-
-## 创建 RoboMaker开发环境
+### 创建 RoboMaker开发环境
 
 应用程序将使用 RoboMaker 环境构建，需要创建 Robomaker开发环境： 
 
@@ -72,7 +70,7 @@ scp greengrass-linux-armv7l-1.9.2.tar.gz user@ROSBOT_IP:greengrass-linux-armv7l-
 
 ![image-20220509092708145](./images/image-20220509092708145.png)
 
-## 部署应用程序 
+### 部署ROS应用程序 
 
 要部署应用程序，需要使用在上一步中创建的 RoboMaker 环境： 
 
@@ -109,7 +107,7 @@ cd ~/environment/RoboMakerROSbotProject/
 
 ![image-20220509093209338](./images/image-20220509093209338.png)
 
-## 查看结果 
+### 查看结果 
 
 本Demo中，ROSbots 的任务是自主探索周围的环境，它将驱动到任何可访问的位置，可以实时观察 ROSbot 是如何构建地图的。
 
