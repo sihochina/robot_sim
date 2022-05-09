@@ -7,7 +7,7 @@ URDF model for Gazebo integrated with ROS.
 We assume that you are working on Ubuntu 16.04 and already have installed ROS Kinetic. If not, follow the [ROS install guide](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 Prepare the repository:
-```
+```bash
 cd ~
 mkdir ros_workspace
 mkdir ros_workspace/src
@@ -22,28 +22,28 @@ Above commands should execute without any warnings or errors.
 
 Clone this repository to your workspace:
 
-```
+```bash
 cd ~/ros_workspace/src
 git clone https://github.com/husarion/rosbot_description.git
 ```
 
 Install depencencies:
 
-```
+```bash
 cd ~/ros_workspace
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
 Build the workspace:
 
-```
+```bash
 cd ~/ros_workspace
 catkin_make
 ```
 
 From this moment you can use rosbot simulations. Please remember that each time, when you open new terminal window, you will need to load system variables:
 
-```
+```bash
 source ~/ros_workspace/devel/setup.sh
 ```
 
@@ -55,13 +55,13 @@ Run the following commands below. Use the teleop to move the robot around to cre
 
 In Terminal 1, launch the Gazebo simulation:
 
-```
+```bash
 roslaunch rosbot_description rosbot_rviz_gmapping.launch
 ```
 
 In Terminal 2, start teleop and drive the ROSbot, observe in Rviz as the map is created:
 
-```
+```bash
 roslaunch rosbot_navigation rosbot_teleop.launch
 ```
 
@@ -123,7 +123,7 @@ next coment RpLidar using GPU using `<!-- -->` from `<gazebo>` to `</gazebo>` li
 Now uncomment RpLidar using CPU plugin removing `<!-- -->`.
 
 If you want to make your laser scan visible just change:
-```
+```bash
 <visualize>false</visualize>
 ```
 to:
